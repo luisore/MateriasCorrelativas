@@ -2,7 +2,7 @@ package materiasCorrelativas;
 
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class MateriasTest {
 
@@ -102,7 +102,7 @@ public class MateriasTest {
         Inscripcion Inscripcion = new Inscripcion(ricardo);
         Inscripcion.agregarMateria(AnalisisMatematico2);
 
-        assertEquals(Inscripcion.aprobada(), Boolean.TRUE);
+        assertTrue(Inscripcion.aprobada());
 
     }
 
@@ -117,7 +117,7 @@ public class MateriasTest {
         Inscripcion Inscripcion = new Inscripcion(ricardo);
         Inscripcion.agregarMateria(Fisica2);
 
-        assertEquals(Inscripcion.aprobada(), Boolean.FALSE);
+        assertFalse(Inscripcion.aprobada());
 
     }
 
