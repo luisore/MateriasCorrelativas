@@ -4,10 +4,10 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class materiasTest {
+public class MateriasTest {
 
 
-    private Alumno ricardo = new Alumno("ricardo");
+    Alumno ricardo = new Alumno("ricardo");
 
     Materia materiaVacia = new Materia("MateriaVacia");
 
