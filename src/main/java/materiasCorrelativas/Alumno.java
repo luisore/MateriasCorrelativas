@@ -1,5 +1,5 @@
 package materiasCorrelativas;
-
+import java.util.HashSet;
 import java.util.Set;
 
 public class Alumno {
@@ -7,6 +7,7 @@ public class Alumno {
     public String getNombre(){return nombre;}
 
     public Alumno(String nombre){
+        this.materiasAprobadas = new HashSet<>();
         this.nombre = nombre;
     }
 
