@@ -4,14 +4,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Materia {
+    private String nombre;
     private Set<Materia> materiasCorrelativas;
 
 
-    public Materia(){
+    public Materia(String nombre){
+        this.nombre = nombre;
         this.materiasCorrelativas = new HashSet<>();
     }
 
-    public void agregarCorrelativa(Materia materia) {
+    public void agregarMateriaCorrelativa(Materia materia) {
         this.materiasCorrelativas.add(materia); }
 
     public Set<Materia> getMateriasCorrelativas(){
