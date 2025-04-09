@@ -3,8 +3,6 @@ package materiasCorrelativas;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import java.util.HashSet;
-import java.util.Set;
 
 public class materiasTest {
 
@@ -40,7 +38,8 @@ public class materiasTest {
     Materia ComunicacionDeDatos = new Materia("Comunicacion De Datos");
     Materia RedesDeDatos = new Materia("Redes De Datos");
 
-    public materiasTest() {
+    @Test
+    public void testAgregarMateriaCorrelativa() {
         AnalisisDeSistemasDeInformacion.agregarMateriaCorrelativa(SistemasYProcesosDeNegocio);
     }
 
