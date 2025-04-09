@@ -7,7 +7,6 @@ import static org.junit.Assert.assertEquals;
 public class MateriasTest {
 
 
-    Alumno ricardo = new Alumno("ricardo");
 
     Materia materiaVacia = new Materia("MateriaVacia");
 
@@ -96,6 +95,7 @@ public class MateriasTest {
     @Test
     public void InscribirMateriaTest() {
 
+        Alumno ricardo = new Alumno("ricardo");
         ricardo.agregarMateriaAprobada(AnalisisMatematico1);
         ricardo.agregarMateriaAprobada(AlgebraYGeometriaAnalitica);
 
@@ -105,5 +105,21 @@ public class MateriasTest {
         assertEquals(Inscripcion.aprobada(), Boolean.TRUE);
 
     }
+
+
+    @Test
+    public void NoSePuedeInscribirMateriaTest() {
+
+        Alumno ricardo = new Alumno("ricardo");
+        ricardo.agregarMateriaAprobada(AnalisisMatematico1);
+        ricardo.agregarMateriaAprobada(AlgebraYGeometriaAnalitica);
+
+        Inscripcion Inscripcion = new Inscripcion(ricardo);
+        Inscripcion.agregarMateria(Fisica2);
+
+        assertEquals(Inscripcion.aprobada(), Boolean.FALSE);
+
+    }
+
 
 }
