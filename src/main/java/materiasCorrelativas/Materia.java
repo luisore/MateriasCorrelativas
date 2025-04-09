@@ -16,8 +16,10 @@ public class Materia {
 
 
 
-    public void agregarMateriaCorrelativa(Materia materia) {
-        this.materiasCorrelativas.add(materia); }
+    public Materia agregarMateriaCorrelativa(Materia materia) {
+        this.materiasCorrelativas.add(materia);
+        return this;
+    }
 
     public Set<Materia> getMateriasCorrelativas(){
         return this.materiasCorrelativas;
